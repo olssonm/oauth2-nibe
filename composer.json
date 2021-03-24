@@ -1,0 +1,38 @@
+{
+    "name": "olssonm/oauth2-nibe",
+    "description": "Nibe OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+    "keywords": [
+        "oauth",
+        "oauth2",
+        "client",
+        "authorization",
+        "authorisation",
+        "nibe"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcus Olsson",
+            "email": "contact@marcusolsson.me"
+        }
+    ],
+    "require": {
+        "league/oauth2-client": "^2.0"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "phpunit/phpunit": "~4.0",
+        "mockery/mockery": "~0.9",
+        "squizlabs/php_codesniffer": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Olssonm\\OAuth2\\Client\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Olssonm\\OAuth2\\Client\\Test\\": "test/src/"
+        }
+    }
+}
