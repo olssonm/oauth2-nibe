@@ -12,47 +12,28 @@ composer require olssonm/oauth2-nibe
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\Olssonm\OAuth2\Client\Provider\Nibe` as the provider.
+Usage is the same as The League's OAuth client, using `Olssonm\OAuth2\Client\Provider\Nibe` as the provider.
 
 ### Authorization Code Flow
 
 ```php
 $provider = new Olssonm\OAuth2\Client\Provider\Nibe([
-    'clientId'          => '{nibe-client-id}',
-    'clientSecret'      => '{nibe-client-secret}',
-    'redirectUri'       => 'https://example.com/callback-url',
-    'scope'             => ['READSYSTEM']
+    'clientId'          => 'XXXXXX',
+    'clientSecret'      => 'XXXXXX',
+    'redirectUri'       => 'https://my.example.com/your-redirect-url/'
 ]);
-
-if (!isset($_GET['code'])) {
-
-    // If we don't have an authorization code then get one
-    $authUrl = $provider->getAuthorizationUrl();
-    $_SESSION['oauth2state'] = $provider->getState();
-    header('Location: '.$authUrl);
-    exit;
-
-// Check given state against previously stored one to mitigate CSRF attack
-} elseif (empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) {
-
-    unset($_SESSION['oauth2state']);
-    exit('Invalid state');
-
-} else {
-
-    // Try to get an access token (using the authorization code grant)
-    $token = $provider->getAccessToken('authorization_code', [
-        'code'  => $_GET['code'],
-        'scope' => ['READSYSTEM'] // Notice that the Nibe API requires scope for retrieving access token
-    ]);
-
-    // Use this to interact with an API on the users behalf
-    echo $token->getToken();
-}
 ```
+
+For further usage of this package please refer to the [core package documentation on "Authorization Code Grant"](https://oauth2-client.thephpleague.com/usage#authorization-code-grant).
+
+### Resource owner information
+
+Nibe does not support access to any personal information of the authorizing resource owner. As such, this package does not support the `getResourceOwner` method documented in the core package.
+
+This package will throw a `Olssonm\OAuth2\Client\Provider\Exception\ResourceOwnerException` exception if you attempt to use this method.
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/michaelKaefer/oauth2-wrike/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/olssonm/oauth2-nibe/blob/master/LICENSE) for more information.
 
 © 2021 [Marcus Olsson](https://marcusolsson.me).
