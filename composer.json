@@ -1,6 +1,6 @@
 {
     "name": "olssonm/oauth2-nibe",
-    "description": "Nibe OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+    "description": "NIBE Uplink OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
     "keywords": [
         "oauth",
         "oauth2",

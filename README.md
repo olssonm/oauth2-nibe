@@ -1,6 +1,6 @@
-# Nibe Provider for OAuth 2.0 Client
+# NIBE Provider for OAuth 2.0 Client
 
-This package provides Nibe OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
+This package provides [NIBE Uplink](https://nibeuplink.com/) OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## Installation
 
@@ -28,7 +28,7 @@ For further usage of this package please refer to the [core package documentatio
 
 ### Resource owner information
 
-Nibe does not support access to any personal information of the authorizing resource owner. As such, this package does not support the `getResourceOwner` method documented in the core package.
+NIBE does not support access to any personal information of the authorizing resource owner. As such, this package does not support the `getResourceOwner` method documented in the core package.
 
 This package will throw a `Olssonm\OAuth2\Client\Provider\Exception\ResourceOwnerException` exception if you attempt to use this method.
 
