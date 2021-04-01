@@ -1,5 +1,8 @@
 # NIBE Provider for OAuth 2.0 Client
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/olssonm/oauth2-nibe?style=flat-square)](https://packagist.org/packages/olssonm/oauth2-nibe)
+[![Software License](https://img.shields.io/packagist/l/olssonm/oauth2-nibe?style=flat-square)](LICENSE.md)
+
 This package provides [NIBE Uplink](https://nibeuplink.com/) OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## Installation
