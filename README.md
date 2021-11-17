@@ -2,6 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/olssonm/oauth2-nibe?style=flat-square)](https://packagist.org/packages/olssonm/oauth2-nibe)
 [![Software License](https://img.shields.io/packagist/l/olssonm/oauth2-nibe?style=flat-square)](LICENSE.md)
+[![Build Status](https://img.shields.io/github/workflow/status/olssonm/oauth2-nibe/Run%20tests.svg?style=flat-square&label=tests)](https://github.com/olssonm/oauth2-nibe/actions?query=workflow%3A%22Run+tests%22)
 
 This package provides [NIBE Uplink](https://nibeuplink.com/) OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
