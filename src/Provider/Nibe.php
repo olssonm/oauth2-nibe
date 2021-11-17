@@ -18,7 +18,8 @@ class Nibe extends AbstractProvider
      *
      * @return string
      */
-    public function getBaseAuthorizationUrl() {
+    public function getBaseAuthorizationUrl()
+    {
         return 'https://api.nibeuplink.com/oauth/authorize';
     }
 
@@ -28,7 +29,8 @@ class Nibe extends AbstractProvider
      * @param array $params
      * @return string
      */
-    public function getBaseAccessTokenUrl(array $params) {
+    public function getBaseAccessTokenUrl(array $params)
+    {
         return 'https://api.nibeuplink.com/oauth/token';
     }
 
@@ -39,7 +41,8 @@ class Nibe extends AbstractProvider
      * @return mixed
      * @throws ResourceOwnerException
      */
-    public function getResourceOwnerDetailsUrl(AccessToken $token) {
+    public function getResourceOwnerDetailsUrl(AccessToken $token)
+    {
         throw new ResourceOwnerException();
     }
 
@@ -49,7 +52,8 @@ class Nibe extends AbstractProvider
      *
      * @return void
      */
-    protected function getDefaultScopes() {
+    protected function getDefaultScopes()
+    {
         return ['READSYSTEM'];
     }
 
@@ -72,7 +76,8 @@ class Nibe extends AbstractProvider
      * @param  string $data Parsed response data
      * @return void
      */
-    protected function checkResponse(ResponseInterface $response, $data) {
+    protected function checkResponse(ResponseInterface $response, $data)
+    {
         if ($response->getStatusCode() >= 400) {
             throw new IdentityProviderException(
                 $data['error'] ?: $response->getReasonPhrase(),
@@ -90,7 +95,8 @@ class Nibe extends AbstractProvider
      * @return void
      * @throws ResourceOwnerException
      */
-    protected function createResourceOwner(array $response, AccessToken $token) {
+    protected function createResourceOwner(array $response, AccessToken $token)
+    {
         throw new ResourceOwnerException();
     }
 }
